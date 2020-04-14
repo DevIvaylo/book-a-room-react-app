@@ -5,7 +5,7 @@ import Rooms from "./components/Rooms";
 import SingleRoom from "./components/SingleRoom";
 import {Switch, Route} from 'react-router-dom'
 import Error from "./components/Error";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/shared/Navbar";
 
 
 function App() {

@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from "./Header";
-import Banner from "./Banner";
+import Header from "./shared/Header";
+import Banner from "./shared/Banner";
 import {Link} from "react-router-dom";
 
 const Rooms = () => {
