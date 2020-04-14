@@ -179,7 +179,7 @@ h6 {
 }
 
 /* end of navbar */
-/* Hero */
+/* header */
 .defaultHeader,
 .roomsHeader {
     min-height: calc(100vh - 66px);
@@ -194,7 +194,7 @@ h6 {
     min-height: 60vh;
 }
 
-/* End of Hero */
+/* End of Header */
 /* Banner */
 .banner {
     display: inline-block;
