@@ -1,9 +1,10 @@
 import React from 'react';
+import Header from "./Header";
 
 const Rooms = () => {
     return (
         <>
-            <h1>Rooms page</h1>
+            <Header header='roomsHeader'/>
         </>
     )
 };
