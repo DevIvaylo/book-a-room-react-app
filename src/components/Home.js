@@ -3,6 +3,7 @@ import Header from "./shared/Header";
 import Banner from "./shared/Banner";
 import {Link} from "react-router-dom";
 import Services from "./Services";
+import FeaturedRooms from "./FeaturedRooms";
 
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
                 </Banner>
             </Header>
             <Services/>
+            <FeaturedRooms/>
         </>
     )
 };
