@@ -32,17 +32,26 @@ class RoomProvider extends Component {
             let images = item.fields.images.map(image =>
                 image.fields.file.url);
             let room = {...item.fields, images, id};
-
-
             return room;
         });
         return tempItems;
     }
 
+    getRoom = (slug) => {
+        let tempRooms = [...this.state.rooms];
+        let room = tempRooms.find(room => room.slug === slug);
+        return room;
+    };
+
     render() {
         return (
             <>
-                <RoomContext.Provider value={{...this.state}}>
+                <RoomContext.Provider value={
+                    {
+                        ...this.state,
+                        getRoom: this.getRoom
+                    }
+                }>
                     {this.props.children}
                 </RoomContext.Provider>
             </>
