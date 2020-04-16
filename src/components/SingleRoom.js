@@ -17,9 +17,6 @@ export default class SingleRoom extends Component {
 
     static contextType = RoomContext;
 
-    // componentDidMount() {
-    // }
-
     render() {
         const {getRoom} = this.context;
         const room = getRoom(this.state.slug);
@@ -38,7 +35,6 @@ export default class SingleRoom extends Component {
 
         // array destructuring
         const [mainImage, ...theRestOfTheImages] = images;
-        console.log(theRestOfTheImages);
 
         return (
             <>

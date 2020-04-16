@@ -13,10 +13,8 @@ const RoomsContainer = () => {
                     if (loading) {
                         return <Loading/>;
                     }
-                    console.log('value', value);
                     return (
                         <>
-                            <h1> rooms container</h1>
                             <RoomFilter rooms={rooms}/>
                             <RoomList rooms={sortedRooms}/>
                         </>

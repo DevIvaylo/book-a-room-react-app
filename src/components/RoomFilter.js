@@ -10,11 +10,9 @@ const getUnique = (items, value) => {
 
 const RoomFilter = ({rooms}) => {
     const context = useContext(RoomContext);
-    console.log('context RoomFilter', context);
     const {handleChange, type, capacity, price, minPrice, maxPrice, minSize, maxSize, breakfast, pets} = context;
     // getUnique types
     let types = getUnique(rooms, 'type');
-    console.log('rooms RoomFilter', rooms);
     // add all
     types = ['all', ...types];
     // map to jsx

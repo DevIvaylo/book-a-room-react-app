@@ -25,7 +25,6 @@ class RoomProvider extends Component {
 
     componentDidMount() {
         let rooms = this.formatData(items);
-        console.log(rooms);
         let featuredRooms = rooms.filter(room => room.featured === true);
         let maxPrice = Math.max(...rooms.map(item => item.price));
         let maxSize = Math.max(...rooms.map(item => item.size));
@@ -62,7 +61,6 @@ class RoomProvider extends Component {
         // because we have dropdowns and checkbox inputs  we want to check the type;
         const value = event.target.type === 'checkbox' ? event.target.checked : event.target.value;
         const name = event.target.name;
-        console.log(`this is value: ${value}, this is name: ${name}`);
         this.setState({
             [name]: value
         }, this.filterRooms)
@@ -87,8 +85,6 @@ class RoomProvider extends Component {
         // transform values as initially is a number but once selecting the range is becoming string so needs to be parsed
         price = parseInt(price);
         tempRooms = tempRooms.filter(room => room.price <= price);
-
-        console.log('temp~Rooms:', tempRooms);
 
         // filter by size
         tempRooms = tempRooms.filter(room => room.size >= minSize && room.size <= maxSize);
