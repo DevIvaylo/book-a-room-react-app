@@ -69,14 +69,22 @@ class RoomProvider extends Component {
     };
 
     filterRooms = () => {
-        const {rooms, type, capacity, price, minPrice, maxPrice, minSize, maxSize, breakfast, pets} = this.state;
+        let {rooms, type, capacity, price, minPrice, maxPrice, minSize, maxSize, breakfast, pets} = this.state;
         let tempRooms = [...rooms];
+
+        // filter by type
         if (type !== 'all') {
             tempRooms = tempRooms.filter(room => room.type === type);
         }
+        // filter by capacity
+        if (capacity !== 1) {
+            // transform values as initially is a number but once selecting from the dropdown is becoming string so need s to be parsed
+            capacity = parseInt(capacity);
+            tempRooms = tempRooms.filter(person => person.capacity >= capacity);
+        }
         console.log('temp~Rooms:', tempRooms);
         this.setState({
-            sortedRooms: tempRooms
+            sortedRooms: tempRooms,
         })
     };
 
