@@ -60,6 +60,32 @@ const RoomFilter = ({rooms}) => {
                     </div>
 
                     {/*end room price*/}
+                    {/*size*/}
+                    <div className="form-group">
+                        <label htmlFor="room size">room size</label>
+                        <div className="size-inputs">
+                            <input type="number" name='minSize' id='size' value={minSize} onChange={handleChange}
+                                   className='size-input'/>
+                            <input type="number" name='maxSize' id='size' value={maxSize} onChange={handleChange}
+                                   className='size-input'/>
+                        </div>
+                    </div>
+                    {/*end size*/}
+                    {/*extras*/}
+                    <div className="form-group">
+                        <div className="single-extra">
+                            <input type="checkbox" name='breakfast' checked={breakfast} id='breakfast'
+                                   onChange={handleChange}
+                                   className='bre'/>
+                            <label htmlFor="breakfast">breakfast</label>
+                        </div>
+                        <div className="single-extra">
+                            <input type="checkbox" name='pets' checked={pets} id='pets' onChange={handleChange}
+                                   className='bre'/>
+                            <label htmlFor="pets">pets</label>
+                        </div>
+                    </div>
+                    {/*end of extras*/}
                 </form>
             </section>
 
