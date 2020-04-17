@@ -5,6 +5,7 @@ Book a room is react app displaying hotel rooms where the user can filter them b
 ### `This project is using:`
 
 - React Context Api for state management
+- React Hooks
 - Netlify for hosting the app as well as continuous deployment
 - React Router for routing
 - React Icons library for icons
